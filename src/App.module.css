@@ -1,0 +1,16 @@
+.wrapper {
+  padding: 64px 32px;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading {
+  text-align: center;
+  color: royalblue;
+}
