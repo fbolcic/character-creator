@@ -5,6 +5,7 @@ function App() {
     <div className={styles.wrapper}>
       <div className={styles.main}>
         <h1 className={styles.heading}>Hello World</h1>
+        <div className={styles.creatorWrapper}></div>
       </div>
     </div>
   );

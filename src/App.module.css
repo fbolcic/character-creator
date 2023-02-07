@@ -14,3 +14,8 @@
   text-align: center;
   color: royalblue;
 }
+
+.creatorWrapper {
+  display: flex;
+  justify-content: space-between;
+}
