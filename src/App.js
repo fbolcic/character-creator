@@ -2,13 +2,7 @@ import { useState } from "react";
 
 import { useGeneratedImage } from "./hooks";
 import { generatePromptFromCharacter } from "./utils";
-import { Header } from "./components/Header";
-import { Button } from "./components/Button";
-import { Input } from "./components/Input";
-import { Radio } from "./components/Radio";
-import { Textarea } from "./components/Textarea";
-import { Separator } from "./components/Separator";
-import { Image } from "./components/Image";
+import { Header, Button, Input, Radio, Textarea, Separator, Image } from "./components";
 
 import styles from "./App.module.css";
 
