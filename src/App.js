@@ -13,14 +13,14 @@ import { Image } from "./components/Image";
 import styles from "./App.module.css";
 
 function App() {
-  const [name, setName] = useState("");
-  const [superpower, setSuperpower] = useState("");
-  const [gender, setGender] = useState("female");
-  const [description, setDescription] = useState("");
+  const [character, setCharacter] = useState({
+    name: "",
+    superpower: "",
+    gender: "female",
+    description: "",
+  });
 
   const { getImageUrl, imageUrl, isIdle, isLoading, isError, isSuccess } = useGeneratedImage();
-
-  const character = { name, superpower, gender, description };
 
   function handleGenerate() {
     const prompt = generatePromptFromCharacter(character);
@@ -33,10 +33,23 @@ function App() {
         <Header text="Character Creator" />
         <div className={styles.creatorWrapper}>
           <div className={styles.creatorInputs}>
-            <Input label="Name" value={name} onChange={setName} />
-            <Input label="Superpower" value={superpower} onChange={setSuperpower} />
-            <Radio label="Gender" options={["male", "female"]} value={gender} onChange={setGender} />
-            <Textarea label="Description" value={description} onChange={setDescription} />
+            <Input label="Name" value={character.name} onChange={(name) => setCharacter({ ...character, name })} />
+            <Input
+              label="Superpower"
+              value={character.superpower}
+              onChange={(superpower) => setCharacter({ ...character, superpower })}
+            />
+            <Radio
+              label="Gender"
+              options={["male", "female"]}
+              value={character.gender}
+              onChange={(gender) => setCharacter({ ...character, gender })}
+            />
+            <Textarea
+              label="Description"
+              value={character.description}
+              onChange={(description) => setCharacter({ ...character, description })}
+            />
             <Button text="Generate" onClick={handleGenerate} />
           </div>
           <Separator />
