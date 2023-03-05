@@ -1,11 +1,91 @@
 .heading {
-  text-align: center;
-  color: royalblue;
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  text-transform: capitalize;
+  color: #6b36c9;
 }
 
 .button {
-  background-color: white;
   padding: 4px 16px;
-  border: 2px solid royalblue;
   border-radius: 8px;
+  padding: 16px 32px;
+  background: #6b36c9;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputBox input,
+.inputBox textarea {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.inputBox label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 16px;
+}
+
+.radioBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.radioBox input {
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.radioBox label {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.imageWrapper {
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 286px;
+  flex: 1;
+}
+
+.imageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  max-width: 155px;
+  text-align: center;
+}
+
+.separator {
+  border: 1px dashed rgba(0, 0, 0, 0.3);
 }

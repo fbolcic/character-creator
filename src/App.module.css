@@ -2,20 +2,29 @@
   padding: 64px 32px;
   max-width: 1024px;
   margin: auto;
+  font-family: "Avenir Next";
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
 }
 
 .heading {
+  font-family: "Titan One";
   text-align: center;
-  color: royalblue;
+  color: #6b36c9;
 }
 
 .creatorWrapper {
   display: flex;
-  justify-content: space-between;
+  gap: 64px;
+}
+
+.creatorInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
 }
