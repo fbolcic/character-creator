@@ -6,6 +6,9 @@ import { Input } from "./components/Input";
 
 function App() {
   const [name, setName] = useState("");
+  const [superpower, setSuperpower] = useState("");
+
+  const character = { name, superpower };
 
   return (
     <div className={styles.wrapper}>
@@ -13,8 +16,9 @@ function App() {
         <Header text="Character Creator" />
         <div className={styles.creatorWrapper}>
           <div className={styles.creatorInputs}>
-            <Input value={name} onChange={setName} />
-            <Button text="Generate" onClick={() => console.log("Character Name: ", name)} />
+            <Input label="Name" value={name} onChange={setName} />
+            <Input label="Superpower" value={superpower} onChange={setSuperpower} />
+            <Button text="Generate" onClick={() => console.log("Character: ", character)} />
           </div>
         </div>
       </div>
