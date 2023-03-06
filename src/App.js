@@ -4,7 +4,7 @@ function App() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.main}>
-        <h1 className={styles.heading}>Hello World</h1>
+        <h1 className={styles.heading}>Git switch works!</h1>
         <div className={styles.creatorWrapper}>
           <div className={styles.creatorInputs}></div>
         </div>
