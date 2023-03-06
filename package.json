@@ -1,5 +1,5 @@
 {
-  "name": "rpg-character-creator",
+  "name": "character-creator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
