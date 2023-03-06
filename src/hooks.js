@@ -6,7 +6,7 @@ export function useGeneratedImage() {
   const [status, setStatus] = useState("idle");
 
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
 
