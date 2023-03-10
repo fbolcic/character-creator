@@ -4,7 +4,7 @@
 
 2. `Header` should accept a `text` prop and render it
 
-3. Style the `Header` with the `styles.header`
+3. Style the `Header` with the `styles.heading`
 
 4. Add `Header` to the `App` instead of the existing `h1` element, with _Character Creator_ as the text
 
@@ -26,16 +26,16 @@
 
 1. Add an `Input` component in the _components_ folder, which renders an `input` element
 
-2. `Input` should accept a `value` and `onChange` props. Bind the props to the input's `value` and `onChange` properties
+2. `Input` should accept a `value` and `onChange` props. Bind the props to the input's `value` and `onChange`
+   properties. Use this code to send the new value of the input to the `onChange` handler:
+   `onChange={(e) => props.onChange(e.target.value)}`
 
-3. Style the `Input` with the `styles.input`
+3. Add a new `Input` to the `App` as a child `div.creatorInputs` container, just before the button
 
-4. Add a new `Input` to the `App` as a child `div.creatorInputs` container, just before the button
-
-5. Hook into `useState` with an empty string as the default value, and place the state getter and setter variables as
+4. Hook into `useState` with an empty string as the default value, and place the state getter and setter variables as
    props to `Input`. The state variables should be named `name` and `setName`.
 
-6. Modify the `Button.onClick` so that it logs the state value from the `Input`
+5. Modify the `Button.onClick` so that it logs the state value from the `Input`
 
 # 04 Label
 
@@ -72,7 +72,8 @@
       <div className={styles.radioGroup}>
         {props.options.map((option) => (
           <div key={option} className={styles.radioBox}>
-            // ...option label and input
+            <label htmlFor={option}>{option}</label>
+            // ...option input
           </div>
         ))}
       </div>
